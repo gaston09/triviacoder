@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+
+{% for usuario in usuarios %}
+    <li> 
+        {{ usuario }}
+        <a href= "/apptrivia/update_usuarios/{{usuario.id}}" class ="btn btn-warning">Editar usuario</a>
+        <a href= "/apptrivia/delete_usuarios/{{usuario.id}}" class="btn btn-danger">Borrar usuario</a>
+    </li>
+    <br>
+{% endfor %}
+
+<a class="btn btn-success" href="/apptrivia/create_usuarios">  Crear usuario </a>
